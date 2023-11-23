@@ -2,26 +2,58 @@
     box-sizing: 0px;
     margin: 0%;
     padding: 0%;
-    font-family: 'Dosis', sans-serif;
-    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    color: #eee;
+    text-decoration: none;
 }
 
 :root {
     --F1: "'Dosis', sans-serif;";
     --F2: "'Poppins', sans-serif;";
+    --cube-width: 300px;
+    --translateZ: 150px;
 }
-nav{
+
+body {
+    text-align: center;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.page-1 {
+    height: 105vh;
+    background-image: url(MEDIA/background.jpg);
+    background-size: cover;
+    position: relative;
+    margin-top: -1%;
+    text-align: center;
+
+}
+
+#ho {
+    text-align: center;
+    font-size: 80px;
+    position: relative;
+    top: 40%;
+    z-index: 6;
+    background-color: rgba(3, 39, 57, 0.62);
+    width: 65%;
+    border-radius: 20px;
+    padding: 2%;
+    margin-left: 16.5%;
+}
+
+/* nav {
     margin-top: 29%;
     scale: 2;
     z-index: 5;
 }
-.page-1{
-    height: 110vh;
-    width: 100vw;
-    background-image: url(background.jpg);
-    background-size: cover;
-    position: absolute;
-}
+
+
 h1,
 h2,
 h3,
@@ -39,7 +71,7 @@ h1 {
 
 .menu-item,
 .menu-open-button {
-    background:rgb(43, 37, 107);
+    background: rgb(43, 37, 107);
     border-radius: 100%;
     width: 80px;
     height: 80px;
@@ -68,6 +100,21 @@ h1 {
     box-sizing: border-box;
     font-size: 20px;
     text-align: left;
+    text-wrap: wrap;
+}
+
+.menu-item {
+    font-size: x-small;
+    font-style: normal;
+    border: #4c15a6 2px solid;
+}
+
+.mi6 {
+    font-size: 6px;
+}
+
+.mi3 {
+    font-size: 8.5px;
 }
 
 .menu-item:hover {
@@ -130,55 +177,237 @@ h1 {
 .menu-open:checked~.menu-item:nth-child(9) {
     transition-duration: 780ms;
     transform: translate3d(-0.25084px, -104.9997px, 0);
-}
-.rain{
+} */
+
+.rain {
     height: 100vh;
+    margin-top: -10%;
     z-index: 1;
-    background-image: url(rain.png);
+    background-image: url(MEDIA/rain.png);
     animation: rain 0.3s linear infinite;
 }
-@keyframes rain{
-    0%{
+
+@keyframes rain {
+    0% {
         background-position: 0% 0%;
     }
-    100%{
+
+    100% {
         background-position: 30% 100%;
     }
 }
-.rain::before{
+
+.rain::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(lightining.png);
+    margin-left: -50%;
+    background-image: url(MEDIA/lightining.png);
     top: -100px;
     transform: rotate(180deg);
     animation: lightining 4s linear infinite;
     opacity: 1;
 }
-@keyframes lightining{
-    0%{
+
+@keyframes lightining {
+    0% {
         opacity: 0;
     }
-    20%{
+
+    20% {
         opacity: 0;
     }
-    21%{
+
+    21% {
         opacity: 1;
     }
-    25%{
+
+    25% {
         opacity: 0;
     }
-    30%{
+
+    30% {
         opacity: 0;
     }
-    31%{
+
+    31% {
         opacity: 1;
     }
-    35%{
+
+    35% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
+}
+
+.page-2 {
+
+    background: url("https://ggsc.s3.amazonaws.com/images/uploads/Forest_in_Japan.jpg");
+    background-size: cover;
+    background-color: grey;
+    background-blend-mode: multiply;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.sub-heading {
+    width: 70%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 100px;
+}
+
+header .sub-heading {
+    font-size: 24px;
+    margin: 0;
+}
+
+.cube-container {
+    perspective: 1000px;
+}
+
+.cube-container .cube {
+    width: var(--cube-width);
+    height: var(--cube-width);
+    transform-style: preserve-3d;
+
+}
+
+.cube-container .cube-face {
+    width: var(--cube-width);
+    height: var(--cube-width);
+    position: absolute;
+    font-size: 45px;
+    background: yellow;
+    color: #000;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cube-container .front {
+    background: #d63946;
+    transform: translateZ(var(--translateZ));
+
+}
+
+.cube-container .back {
+    background: #06d6a0;
+    transform: rotateY(180deg) translateZ(var(--translateZ));
+}
+
+.cube-container .left {
+    background: #023047;
+    color: #fff;
+    transform: rotateY(-90deg) translateZ(var(--translateZ));
+}
+
+.cube-container .right {
+    background: #3d348b;
+    color: #fff;
+    transform: rotateY(90deg) translateZ(var(--translateZ));
+}
+
+.cube-container .top {
+    background: #a8dadc;
+    transform: rotateX(90deg) translateZ(var(--translateZ));
+}
+
+.cube-container .bottom {
+    background: #ffd166;
+    transform: rotateX(-90deg) translateZ(var(--translateZ));
+}
+
+h{
+    background-color: #ffd166;
+}
+
+d{
+    text-decoration: underline;
+}
+
+.page-3{
+    background-image: url("https://i.guim.co.uk/img/media/f4094faad1886012242ca81a6eed3dc030c09545/0_278_3000_1800/master/3000.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=1695503899d7d155ae9f90ce536c7497");
+    background-size: cover;
+    background-color: rgb(208, 208, 208);
+    background-blend-mode: multiply;
+}
+.flashcard-container:hover .flashcard {
+    transform: rotateY(180deg);
+}
+.flashcard-container{
+    position: relative;
+    top: 10%;
+    left: 15%;
+    height: 70vh ;
+    width: 80vw ;
+}
+
+.flashcard-container,
+.question,
+.answer {
+    width:60vw;
+    height: 65vh;
+    top: 10%;
+    left: 20%;
+}
+
+.flashcard {
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.question {
+    z-index: 5;
+}
+
+.answer {
+    transform: rotateY(180deg);
+    font-size: 20px !important;
+    text-wrap: wrap;
+    text-align: left;
+}
+
+.question,
+.answer {
+    backface-visibility: hidden;
+    border: 1px solid #aaa;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.535);
+    border-radius: 10px 10px;
+    padding: 5%;
+}
+img{
+    margin: 5%;
+    border-radius: 5px;
+    object-fit: contain;
+    aspect-ratio:1;
+    height:70% ;
+}
+.cll{
+  
 }

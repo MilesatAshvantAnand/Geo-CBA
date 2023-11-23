@@ -1,0 +1,135 @@
+* {
+     box-sizing: border-box;
+     margin: 0px;
+     padding: 0px;
+     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+outline: 1px;
+border-radius: 5px;
+   }
+body {
+     background-image: url("https://render.fineartamerica.com/images/rendered/search/print/8/6/break/images/artworkimages/medium/1/god-the-father-cima-da-conegliano.jpg");
+     background-repeat: no-repeat;
+     background-attachment: fixed;  
+     background-position: center;
+     background-size: cover;
+     width: 100vw;
+     height: 100vh;
+
+   }
+   .card{
+     width:80%;
+     height: max-content;
+     position:relative;
+     z-index: 2;
+     margin: 3% 2%;
+     color: aliceblue;
+     background-color: rgba(0, 0, 0, 0.500);
+     padding:1.5%;
+     text-align: justify;
+     }
+
+   .left{
+     float: left;
+     
+   }
+   .right{
+     float: right; 
+   }
+   .cardTitle{
+     margin-bottom: 4%;
+     background-color: rgba(0, 0, 0, 0.274);
+     padding: 6px;
+     padding-left: 9px !important;
+   }
+.card2:hover > body{
+ background-image: url("https://static1.squarespace.com/static/5126bbb4e4b08c2e6d1cb6e4/t/561ee0d1e4b06ac998bfce76/1444864226999/");
+color:black
+}
+br{
+height: 7px;
+display: block;
+content:"";
+}
+.table1{
+margin-top:70%;
+}
+img{
+width:30vw;
+z-index:2;
+display:flex;
+float:right;
+aspect-ratio:1;
+image-rendering:pixelated;
+}
+.cardinfo{
+float:left;
+display:flexbox;
+width: 55%;
+
+}
+h6,h5{
+text-align: center;
+top:55%;
+position: relative;
+}
+h5{
+font-size: 7vw;
+font-family:'San Marino Beach';
+color:white;
+}
+h6{
+font-size: 3.5vw;
+color: white;
+font-family: 'Scripto';
+}
+p{
+font-size: 20px;
+}
+.right > img{
+float: left;
+}
+.right > .cardinfo{
+float: right;
+}
+.card3 > .cardinfo{
+width:35%;
+}
+.card3 > img{
+width:48vw;
+height: auto;
+aspect-ratio:0;
+}
+.card4>img{
+margin-top:1%
+}
+.card5>img{
+aspect-ratio: 0;
+margin-top: 8%;
+}
+.card6>img{
+width:30vw;
+aspect-ratio: 0;
+}
+.card6>.carinfo{
+width: 25%;
+}
+.card7>img{
+aspect-ratio: 0;
+}
+.card8>img{
+aspect-ratio: 0;
+}
+
+.card:hover{
+background-color: rgba(0, 0, 0, 0.700);
+transition: ease-in;
+transition-duration: 200ms;
+}
+td>img{
+aspect-ratio:0;
+width:35vw;
+float:left;
+}
+.card9{
+width:95vw;
+}
